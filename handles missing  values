@@ -1,0 +1,15 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+def preprocess_dataset(df):
+  df = df.fillna(df.mean())
+  return df
+
+data = {
+        'feature1': [1, 2, 3, 4, None],
+        'feature2': [10, 20, None, 40, 50],
+        'target': [0, 1, 0, 1, 1]
+    }
+df = pd.DataFrame(data)
+print(preprocess_dataset(df))
+
