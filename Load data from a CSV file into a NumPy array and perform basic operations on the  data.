@@ -1,0 +1,12 @@
+import numpy as np
+data = np.genfromtxt('data.csv', delimiter=',')
+print(data.shape)
+print(data[:5])
+column_means = np.mean(data, axis=0)
+print(column_means)
+column_stds = np.std(data, axis=0)
+print(column_stds)
+first_three_columns = data[:, :3]
+print(first_three_columns)
+rows_with_second_column_greater_than_5 = data[data[:, 1] > 5]
+print(rows_with_second_column_greater_than_5)
