@@ -1,0 +1,12 @@
+import pandas as pd
+import sklearn
+
+def learning_problem_summary(dataset, target):
+    num_features = data.data.shape[1]
+    num_instances = data.data.shape[0]
+    problem_type = "classification" if len(set(data.target)) > 2 else "regression"
+    print(num_features)
+    print(num_instances)
+    print(problem_type)
+data = load_iris()
+learning_problem_summary(data, "species")
