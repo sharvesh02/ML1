@@ -1,0 +1,9 @@
+
+import numpy as np
+
+def print_shape_and_ndim(array):
+  print("Shape:", array.shape)
+  print("Number of dimensions:", array.ndim)
+
+array = np.array([[1, 2, 3], [4, 5, 6]])
+print_shape_and_ndim(array)
