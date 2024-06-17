@@ -1,0 +1,16 @@
+import pandas as pd
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+    'Grade': [90, 85, 75, 95, 80],
+    'Subject': ['Math', 'Science', 'English', 'Math', 'History']
+}
+df = pd.DataFrame(data)
+df_sorted_by_name = df.sort_values(by='Name')
+df_grouped_by_subject = df.groupby('Subject')['Grade'].mean()
+df_filtered_by_grade = df[df['Grade'] > 85]
+print('DataFrame sorted by name:')
+print(df_sorted_by_name)
+print('\nDataFrame grouped by subject:')
+print(df_grouped_by_subject)
+print('\nDataFrame filtered by grade:')
+print(df_filtered_by_grade)
