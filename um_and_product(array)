@@ -1,0 +1,17 @@
+import numpy as np
+
+def sum_and_product(array):
+
+
+  sum_of_elements = np.sum(array)
+  product_of_elements = np.prod(array)
+
+  return sum_of_elements, product_of_elements
+
+# Example usage
+array = np.array([1, 2, 3, 4, 5])
+
+sum_of_elements, product_of_elements = sum_and_product(array)
+
+print(f"Sum of elements: {sum_of_elements}")
+print(f"Product of elements: {product_of_elements}")
