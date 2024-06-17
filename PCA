@@ -1,0 +1,30 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def pca(X):
+ 
+  cov_matrix = np.cov(X.T)
+
+  eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+
+  sorted_indices = np.argsort(eigenvalues)[::-1]
+  eigenvalues = eigenvalues[sorted_indices]
+  eigenvectors = eigenvectors[:, sorted_indices]
+
+
+  return eigenvectors
+
+X = np.random.rand(100, 3)
+
+
+principal_components = pca(X)
+
+X_reduced = np.dot(X, principal_components[:, :2])
+
+
+plt.scatter(X_reduced[:, 0], X_reduced[:, 1])
+plt.xlabel('PC1')
+plt.ylabel('PC2')
+plt.show()
