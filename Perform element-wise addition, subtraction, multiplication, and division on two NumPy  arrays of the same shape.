@@ -1,0 +1,11 @@
+import numpy as np
+array1 = np.array([[1, 2, 3], [4, 5, 6]])
+array2 = np.array([[7, 8, 9], [10, 11, 12]])
+elementwise_addition = array1 + array2
+print("Elementwise Addition:\n", elementwise_addition)
+elementwise_subtraction = array1 - array2
+print("\nElementwise Subtraction:\n", elementwise_subtraction)
+elementwise_multiplication = array1 * array2
+print("\nElementwise Multiplication:\n", elementwise_multiplication)
+elementwise_division = array1 / array2
+print("\nElementwise Division:\n", elementwise_division)
